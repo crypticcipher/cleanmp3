@@ -39,8 +39,8 @@ a:hover {
 html,
 body {
   height: 100%;
-  background: rgb(81, 17, 229);
-  background: radial-gradient(circle at 10% 20%, rgba(6, 0, 255, 0.61) 0%, rgb(191, 0, 255) 100.7%);
+  background: rgb(17, 24, 229);
+  background: radial-gradient(circle at 10% 20%, rgba(0, 51, 255, 0.61) 0%, rgb(0, 38, 255) 100.7%);
 }
 
 body {
