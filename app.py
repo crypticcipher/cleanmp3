@@ -57,13 +57,17 @@ def download_mp3():
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 info_dict = ydl.extract_info(url, download=True)
                 filename = ydl.prepare_filename(info_dict)
-                filename = filename.rsplit(".", 1)[0] + ".mp3"  # Change extension to mp3
+                filename = filename.rsplit(".", 1)[0] + ".mp3"
                 return send_from_directory('downloads', os.path.basename(filename), as_attachment=True)
         except Exception as e:
             flash(str(e))
             return render_template('index.html')
 
 
+
+
+
+# download video under maintenance for now.
 @app.route('/downloadvid', methods=["POST", "GET"])
 def download_video():
     try:
@@ -90,3 +94,4 @@ if __name__ == '__main__':
     app.run(debug=True)
 
     #app.run(port=5000, debug=True)
+
